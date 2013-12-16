@@ -1,0 +1,34 @@
+﻿ <controls:PhoneApplicationPage
+     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+     x:Class="SleepHack.Facebook"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"><!--LayoutRoot is the root grid where all page content is placed-->
+<x:Grid xmlns:x="http://schemas.microsoft.com/client/2007" x:Name="LayoutRoot" Background="Transparent">
+    <x:Grid.RowDefinitions>
+        <x:RowDefinition Height="Auto"/>
+        <x:RowDefinition Height="*"/>
+    </x:Grid.RowDefinitions>
+
+    <!--TitlePanel contains the name of the application and page title-->
+    <x:StackPanel x:Name="TitlePanel" x:Grid.Row="0" Margin="12,17,0,28">
+        <x:TextBlock x:Name="ApplicationTitle" Text="FACEBOOK C# SDK" Style="{StaticResource PhoneTextNormalStyle}"/>
+        <x:TextBlock x:Name="PageTitle" Text="login" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+    </x:StackPanel>
+
+    <!--ContentPanel - place additional content here-->
+    <x:Grid x:Name="ContentPanel" x:Grid.Row="1" Margin="12,0,12,0">
+        <x:Button Content="Login To Facebook" Height="73" HorizontalAlignment="Left" Margin="101,252,0,0" Name="btnFacebookLogin" VerticalAlignment="Top" Width="276" Click="BtnFacebookLoginClick" />
+    </x:Grid>
+</x:Grid>
+
+</controls:PhoneApplicationPage>

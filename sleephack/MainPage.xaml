@@ -1,0 +1,52 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SleepHack.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Telerik.Windows.Controls.ToggleSwitch;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Images/earth-and-moon-in-dark-universe.jpg"/>
+            </Grid.Background>
+            <TextBlock Height="70" TextAlignment="Center" Margin="6,6,0,0" Name="tblTitle" Text="SleepHack" FontSize="42" VerticalAlignment="Top" Width="474" Foreground="#FF5C5C5C" FontWeight="Normal" FontFamily="Comic Sans MS" />
+            <TextBlock FontSize="26" Height="49" HorizontalAlignment="Left" Margin="8,101,0,0" Name="textBlock1" Text="Latest wake up time:" VerticalAlignment="Top" FontWeight="Normal" FontStretch="ExtraExpanded" FontFamily="Segoe WP Semibold" />
+            <telerikInput:RadTimePicker x:Name="timePicker" Height="80" Margin="255,83,6,0" FontFamily="Comic Sans MS"></telerikInput:RadTimePicker>
+            <Button Content="Sleep" Height="96" HorizontalAlignment="Left" Margin="60,168,0,0" VerticalAlignment="Top" Width="317" Tap="ButtonTap" />
+            <Border Visibility="Collapsed" Height="800" HorizontalAlignment="Left" Name="border1" VerticalAlignment="Top" Width="480" Background="Black" Tap="Border1Tap" >
+                <TextBlock TextAlignment="Center" FontSize="40" Text="Sleep tight" Margin="0,300,0,0" Foreground="#FF4E4E4E" Width="480" />
+            </Border>
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Skydrive" Click="AppBarSkydriveClick"/>
+                <shell:ApplicationBarMenuItem Text="Facebook" Click="AppBarFacebookClick"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
+  
